@@ -28,8 +28,8 @@
                 <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarSupportedContent">
 
                     <div class="d-flex" role="search">
-                    <a href="" class="text-decoration-none">News</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <a href="" class="text-decoration-none">Blog</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="index.html" class="text-decoration-none border border-3 border-primary border-end-0 border-top-0 border-start-0 ">News</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="blog.html" target="_blank" class="text-decoration-none">Blog</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <a href=""><i class="fa-solid fa-user fs-3 text-black" title="sign-in"></i></a>
                     </div>
                 </div>
@@ -39,49 +39,27 @@
          <hr>
 
             <!-- Navbar Lower Section -->
-            <nav class="navbar navbar-expand-lg bg-light">
+            <nav class="navbar navbar-expand-lg bg-primary">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+          
                 <div class="container">
                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                      <li class="nav-item me-5">
-                        <a class="nav-link active hover" aria-current="page" href="#">Home</a>
-                      </li>
-                      <li class="nav-item me-5">
-                        <a class="nav-link hover" href="#">Breaking News</a>
-                      </li>
-                      <li class="nav-item me-5">
-                        <a class="nav-link hover" href="">Regular News</a>
-                      </li>
-                      <li class="nav-item me-5">
-                        <a class="nav-link hover" href="">International News</a>
-                      </li>
-                      <li class="nav-item me-5">
-                        <a class="nav-link hover" href="">Sports</a>
-                      </li>
-                      <li class="nav-item me-5">
-                        <a class="nav-link hover" href="">Entertainment</a>
-                      </li>
-                      <li class="nav-item me-5">
-                        <a class="nav-link hover" href="">Culture</a>
-                      </li>
-                      <li class="nav-item me-5">
-                        <a class="nav-link hover" href="">Arts</a>
-                      </li>
-                      <li class="nav-item me-5">
-                        <a class="nav-link hover" href="">All News</a>
-                      </li>
+                    <ul id="category-container" class="navbar-nav me-auto mb-2 mb-lg-0">
+                     
                     </ul>
                     
                   </div>
                 </div>
               </nav>    
          <!-- Navbar Section End -->
-         
 
 
-         <!-- Show how many News Articles are in the body section  -->
-         <div id="news-number" class="text-light bg-secondary h-25 p-3 fs-4 mt-4 mx-5">
-                <p>Ekhane koyta News dekha jaitese seta JS diye dekhabo</p>
+
+         <!-- Show how many News Articles are exist in each category -->
+         <div  class="text-light bg-secondary h-25 p-3 fs-4 my-4 mx-5">
+                <p id="news-number"></p>
          </div>
          
          <div class="container d-flex justify-content-end mt-3">
@@ -93,12 +71,54 @@
     </header>
 
 
+        <!--------------- News Article Section --------------------->
+    <article id="card-container" class="container mt-5">
+        
+    </article>
+
+
+
+        <!-- Buffering or Loading spinner -->
+        <div id="spinner" class="text-primary d-flex justify-content-center d-none">
+          <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </div>    
+
+
+        <!-- Modal section when clicking a particular card -->
+        <!-- Button trigger modal -->
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div id="modal-container" class="modal-content">
+                
+                <div class="modal-body">
+                  ...
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
 
     <!-- Bootstrap JS Link -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
  
     <!-- Custom JS Link -->
-    <script src="js/home.js"></script>
-
+    <script src="js/category.js"></script>
+    <script src="js/news.js"> </script>
+    
 </body>
+
+<footer class="h-25 mt-5 p-4 bg-dark">
+       <p class="text-center text-light fs-4">Copyright 2021</p>
+       <p class="text-center text-light fs-4">Global News</p>
+
+</footer>
 </html>

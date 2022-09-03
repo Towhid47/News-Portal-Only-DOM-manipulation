@@ -1,5 +1,26 @@
 /* Nav items hover effect */
 .hover:hover{
-    background-color: rgba(30, 143, 255, 0.452);
-    color: blue;
+    background-color: rgb(30, 143, 255);
 }
+
+/* Card Hover */
+.card-hover:hover{
+     background-color: rgba(139, 138, 138, 0.323);
+}
+
+/* Card Gaps */
+.card-gutter{
+     margin-bottom: 10px;
+     max-width: 150rem;
+}
+
+/* Author Image */
+.author-image-container{
+     width: 30%;  
+}
+.author-image{
+    width: 100%;
+    border-radius: 60px;
+    
+}
+
